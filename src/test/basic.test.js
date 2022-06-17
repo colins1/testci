@@ -67,11 +67,6 @@ class ResultZombie {
   }
 };
 
-export function createDaemon(name, type) {
-  return new Daemon(name, type);
-}
-
-
 test('should Bowerman', () => {
   const Result1 = new Bowerman('max','Bowman');
   const Result11 = new ResultBowman();
@@ -109,33 +104,25 @@ test('should Zombie', () => {
 });
 
 test('name check < 2', () => {
-  try {
-    createDaemon('m','Zombie');
-  } catch (e) {
-    expect(() => e).toThrow('min 3 string');
-  }
+  expect(() => {
+    new Daemon('m','Daemon'); 
+  }).toThrow('min 3 string');
 });
 
 test('name check > 10', () => {
-  try {
-    createDaemon('maxaxaxaxaxaxax','Zombie');
-  } catch (e) {
-    expect(e.Zombie).toThrow('max 10 string');
-  }
+  expect(() => {
+    new Daemon('maxaxaxaxaxaxax','Daemon'); 
+  }).toThrow('max 10 string');
 });
 
 test('name check string', () => {
-  try {
-    const _ = new Zombie('1385661','Zombie');
-  } catch (e) {
-    expect(e.Zombie).toThrow('please edit to string');
-  }
+  expect(() => {
+    new Daemon(3234138,'Daemon'); 
+  }).toThrow('please edit to string');
 });
 
 test('type check', () => {
-  try {
-    const _ = new Zombie('max','Zombier');
-  } catch (e) {
-    expect(e.Zombie).toThrow('you selected a non-existent type');
-  }
+  expect(() => {
+    new Daemon('max','Zombier'); 
+  }).toThrow('you selected a non-existent type');
 });

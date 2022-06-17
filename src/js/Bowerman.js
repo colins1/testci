@@ -1,4 +1,4 @@
-import Character from '../js/basic';
+import Character from '../js/Character';
 
 export default class Bowerman extends Character {
     constructor (name, type) {

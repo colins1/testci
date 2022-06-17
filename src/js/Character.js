@@ -1,30 +1,4 @@
-const params = {
-  Bowman: {
-    attack: 25,
-    defense: 25,
-  },
-  Swordsman: {
-    attack: 40,
-    defense: 10,
-  },
-  Magician: {
-    attack: 10,
-    defense: 40,
-  },
-  Undead: {
-    attack: 25,
-    defense: 25,
-  },
-  Zombie: {
-    attack: 40,
-    defense: 10,
-  },
-  Daemon: {
-    attack: 10,
-    defense: 40,
-  }
-};
-
+import params from '../js/params';
 
 export default class Character {
   constructor (name, type) {
@@ -37,20 +11,21 @@ export default class Character {
     this.level = 1;
     this.attack = params[this.type].attack;
     this.defence = params[this.type].defense;
-  }
+  };
 
   
   nameEdit(name) {
+    if (name.length < 2) {
+     throw new Error('min 3 string');
+    }
+    if (name.length > 10) {
+      throw new Error('max 10 string');
+    }
+    console.log(typeof name);
     if (typeof name !== 'string') {
       throw new Error('please edit to string');
     }
-    if (name.length < 1) {
-     throw new Error('min 3 string');
-    }
-    if (name.length > 15) {
-      throw new Error('max 10 string');
-    }
-    return name;
+      return name;
   };
 
   typeEdit(type) {
