@@ -1,6 +1,6 @@
 import Daemon from '../js/Daemon';
 test('should return the created Daemon', () => {
-  expect(new Daemon('John')).toEqual({
+  expect(new Daemon('max', 'Daemon')).toEqual({
     name: 'max',
     type: 'Daemon',
     health: 100,

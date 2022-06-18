@@ -1,6 +1,6 @@
 import Undead from '../js/Undead';
 test('should return the created Undead', () => {
-  expect(new Undead('John')).toEqual({
+  expect(new Undead('max', 'Undead')).toEqual({
     name: 'max',
     type: 'Undead',
     health: 100,

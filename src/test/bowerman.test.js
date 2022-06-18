@@ -1,7 +1,7 @@
 import Bowerman from '../js/Bowerman';
 
 test('should return the created Bowerman', () => {
-  expect(new Bowerman('John')).toEqual({
+  expect(new Bowerman('max','Bowman')).toEqual({
     name: 'max',
     type: 'Bowman',
     health: 100,

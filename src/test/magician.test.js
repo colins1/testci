@@ -1,6 +1,6 @@
 import Magician from '../js/Magician';
 test('should return the created Magician', () => {
-  expect(new Magician('John')).toEqual({
+  expect(new Magician('max', 'Magician')).toEqual({
     name: 'max',
     type: 'Magician',
     health: 100,
