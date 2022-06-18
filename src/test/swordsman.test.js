@@ -1,4 +1,5 @@
 import Swordsman from '../js/Swordsman';
+
 test('should return the created Swordsman', () => {
   expect(new Swordsman('max', 'Swordsman')).toEqual({
     name: 'max',
