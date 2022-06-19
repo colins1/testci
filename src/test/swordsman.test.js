@@ -7,6 +7,6 @@ test('should return the created Swordsman', () => {
     health: 100,
     level: 1,
     attack: 40,
-    defense: 10
+    defence: 10
   });
 });

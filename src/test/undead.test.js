@@ -7,6 +7,6 @@ test('should return the created Undead', () => {
     health: 100,
     level: 1,
     attack: 25,
-    defense: 25
+    defence: 25
   });
 });

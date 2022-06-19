@@ -7,6 +7,6 @@ test('should return the created Magician', () => {
     health: 100,
     level: 1,
     attack: 10,
-    defense: 40
+    defence: 40
   });
 });
